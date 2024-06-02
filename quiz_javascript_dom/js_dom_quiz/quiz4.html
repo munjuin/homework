@@ -38,6 +38,13 @@
 
     <script>
       // TODO: 문제 조건을 만족하는 js 코드 작성
+      document.querySelectorAll('span').forEach(function(params){
+        params.style.color = 'blueviolet';
+        params.style.fontWeight = 'bold';
+      });
+      document.getElementsByClassName('container')[0].style.backgroundColor = "#eee";
+      document.querySelector('.container').style.textAlign = 'center';
+      
     </script>
   </body>
 </html>
