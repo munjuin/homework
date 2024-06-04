@@ -28,9 +28,22 @@
       // - [ ] <ul class="comment-list"> 태그에 li를 추가합니다.
       // - [ ] 아이디 input과 댓글 input을 초기화해야 합니다.
 
-      document.querySelector('button').addEventListener('shbmit', function(){
+      let userid = document.querySelector('#userid');
+      let comment = document.querySelector('#comment');
+      let btn = document.querySelector('button');
+      let commentList = document.querySelector('.comment-list');
 
-      });
+      btn.addEventListener('click', (e)=>{
+        e.preventDefault();
+        let list = document.createElement('li');
+        list.innerHTML = `<li><b>${userid.value}</b> - ${comment.value}</li>`;
+        
+        commentList.append(list);
+
+        userid.value = '';
+        comment.value = '';
+      })
+
     </script>
   </body>
 </html>
